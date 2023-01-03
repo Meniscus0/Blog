@@ -1,6 +1,6 @@
 # [Info]
 site_name: 张梓恒的个人网站，一个开源的知识共享平台 # 左上角标题
-site_url: https://Meniscus0.github.io
+site_url: https://Meniscus0.github.io/Blog
 site_author: 张梓恒
 site_description: 张梓恒的个人网站
 
@@ -36,10 +36,10 @@ theme:
     repo: fontawesome/brands/github
 ##edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
-repo_url: https://github.com/Meniscus0/Meniscus0.github.io # 右上角点击跳转的链接
-repo_name: Meniscus0.github.io # 右上角的名字
+repo_url: https://github.com/Meniscus0 # 右上角点击跳转的链接
+repo_name: Meniscus0 # 右上角的名字
 ## [bottom-left corner]
-copyright: Copyright &copy; 2023 Ziheng Zhang  # 左下角的版权声明
+copyright: Copyright &copy; 2022-2023 Ziheng Zhang  # 左下角的版权声明
 ## [bottom-right corner]
 extra:
   social: # icons
