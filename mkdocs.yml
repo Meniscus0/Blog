@@ -1,5 +1,6 @@
+
 # [Info]
-site_name: 张梓恒的个人网站，一个开源的知识共享平台 # 左上角标题
+site_name: 张梓恒的个人网站，一个开源的知识共享平台 # 左上角标�?
 site_url: https://Meniscus0.github.io/Blog
 site_author: 张梓恒
 site_description: 张梓恒的个人网站
@@ -8,35 +9,35 @@ site_description: 张梓恒的个人网站
 ## [top]
 theme:
   name: material
-  palette:
-      
+  palette:   
     - scheme: default # 日间模式
-      primary: blue # 上方的
-      accent: orange # 链接等可交互元件的高亮色
+      primary: blue # 上方�?
+      accent: orange # 链接等可交互元件的高�?�?
       toggle:
         icon: material/weather-night # 图标
-        name: 切换至夜间模式 # 鼠标悬浮提示
+        name: 切换至夜间模式 # 鼠标�?�?提示
     - scheme: slate # 夜间模式
       primary: indigo
       accent: orange
       toggle:
         icon: material/weather-sunny
-        name: 切换至日间模式
+        name: 切换至日间模式?
         
   features:
     - navigation.instant
-    - navigation.tabs # 使用Tab来进行分类
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - navigation.tabs # 使用Tab来进行分�?
+    - navigation.top # 返回顶部的按�? 在上滑时出现
+    - navigation.indexes # Tab会有一个index.md 而不�?在打开Tab时打开�?一篇文�?
     - navigation.expand # 打开Tab时左侧目录全部展开
     - search.suggest # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight # 搜索出的文章关键词加入高亮
-  language: zh # 一些提示性的文字会变成中文
+    - search.highlight # 搜索出的文章关键词加入高�?
+    
+  language: zh # 一些提示性的文字会变成中�?
   icon:
     repo: fontawesome/brands/github
-##edit_uri: edit/main/docs # 编辑按钮跳转的链接
+##edit_uri: edit/main/docs # 编辑按钮跳转的链�?
 ## [top-right corner]
-repo_url: https://github.com/Meniscus0 # 右上角点击跳转的链接
+repo_url: https://github.com/Meniscus0 # 右上角点击跳�?的链�?
 repo_name: Meniscus0 # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2022-2023 Ziheng Zhang  # 左下角的版权声明
@@ -45,26 +46,32 @@ extra:
   social: # icons
     #- icon: fontawesome/brands/bilibili
       #link: https://space.bilibili.com/24502827
-      #name: Bilibili | 我不是小杰 # 鼠标悬浮提示
+      #name: Bilibili | 我不�?小杰 # 鼠标�?�?提示
+    - icon: fontawesome/brands/weixin
+      link: https://raw.githubusercontent.com/Meniscus0/FigureBed/main/img/b7ad74391aab79e44459cca558a34d3.jpg
+      name: 我的微信
     - icon: fontawesome/brands/github
-      link: https://github.com/Yang-Xijie
-      name: GitHub | Yang-Xijie
-
+      link: https://github.com/Meniscus0
+      name: GitHub | Meniscus0
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:zzh_cd@126.com
+      name: 我的邮箱
+    
 # [Navigtion]
 nav:
   - 数学:
-    - LECTURE/index.md 
+    - 数学/index.md 
     - 高等数学(上):
       - Linux讲座: LECTURE/Linux/linux.md
-      - 命令行入门精简版: LECTURE/Linux/commands-concise.md
+      - 命令行入门精简�?: LECTURE/Linux/commands-concise.md
     - 高等数学(下):
       - Markdown讲座: LECTURE/Markdown/markdown.md
-      - VSCode及插件安装: LECTURE/Markdown/vscode-extension.md
+      - VSCode及插件安装?: LECTURE/Markdown/vscode-extension.md
     - 线性代数:
       - Git: LECTURE/Git/git.md
       - Git例子: LECTURE/Git/git-demos.md
       - Git合作: LECTURE/Git/git-teamwork.md
-      - Windows安装Git: LECTURE/Git/windows-install.md
+      - Windows安�?�Git: LECTURE/Git/windows-install.md
     - 离散数学: LECTURE/App/app-design.md
     - 吉米多维奇:
       - LECTURE/Flutter/macos-simulator-ios.md
@@ -72,98 +79,99 @@ nav:
       - LECTURE/Flutter/221120-consideration.md
     - 考研数学:
       - 0 介绍: LECTURE/vscode-cpp/0_about.md
-      - 1 前言和课程说明: LECTURE/vscode-cpp/1_前言和课程说明.md
-      - 2 认识macOS的文件系统: LECTURE/vscode-cpp/2_认识macOS的文件系统.md
+      - 1 前言和�?�程说明: LECTURE/vscode-cpp/1_前言和�?�程说明.md
+      - 2 认识macOS的文件系�?: LECTURE/vscode-cpp/2_认识macOS的文件系�?.md
       - 3 认识程序: LECTURE/vscode-cpp/3_认识程序.md
-      - 4 认识终端和shell: LECTURE/vscode-cpp/4_认识终端和shell.md
-      - 5 开启VSCode的大门: LECTURE/vscode-cpp/5_开启VSCode的大门.md
-      - 6 VSCode代码运行自动化: LECTURE/vscode-cpp/6_VSCode代码运行自动化.md
+      - 4 认识终�??和shell: LECTURE/vscode-cpp/4_认识终�??和shell.md
+      - 5 开启VSCode的大�?: LECTURE/vscode-cpp/5_开启VSCode的大�?.md
+      - 6 VSCode代码运�?�自动化: LECTURE/vscode-cpp/6_VSCode代码运�?�自动化.md
       - 7 用VSCode调试Cpp代码: LECTURE/vscode-cpp/7_用VSCode调试Cpp代码.md
       - 8 课程回顾: LECTURE/vscode-cpp/8_课程回顾.md
       - 其他: LECTURE/vscode-cpp/9_others.md
       - 极速版: LECTURE/vscode-cpp/10_极速版.md
       - 补充: LECTURE/vscode-cpp/11_补充.md
     - 在macOS上用VSCode写Python: LECTURE/vscode-python/vscode-python.md
-    - 英语音标教学: LECTURE/English/phonetic-symbol.md
+    - 英�??音标教�??: LECTURE/English/phonetic-symbol.md
   - 算法:
     - 算法/index.md
     - 代码随想录:
       - 训练营: 算法/代码随想录/训练营.md
       - 时间复杂度: 算法/代码随想录/时间复杂度.md
       - Blender: BLOG/ComputerGraphics/blender-notes.md
+    - Leetcode:
+      - 每日一题: 算法/Leetcode/每日一题.md
+      - 周赛: 算法/Leetcode/周赛.md
+      - 双周赛: 算法/Leetcode/双周赛.md
     - Hello-algo:
       - Unity: BLOG/Game/unity-notes.md
       - UE: BLOG/Game/ue-notes.md
       - 定义: BLOG/Game/what-is-game.md
-      - 2D和3D: BLOG/Game/2d-vs-3d.md
+      - 2D�?3D: BLOG/Game/2d-vs-3d.md
     - Fucking-algo:
-      - 笔记2/3: BLOG/Japanese/notes-2202-2203.md
-      - 笔记4: BLOG/Japanese/notes-2204.md
-      - 笔记5: BLOG/Japanese/notes-2205.md
+      - 笔�??2/3: BLOG/Japanese/notes-2202-2203.md
+      - 笔�??4: BLOG/Japanese/notes-2204.md
+      - 笔�??5: BLOG/Japanese/notes-2205.md
       - 动词整理: BLOG/Japanese/verb.md
-      - 形容词整理: BLOG/Japanese/adj.md
+      - 形�?�词整理: BLOG/Japanese/adj.md
       - 名词整理: BLOG/Japanese/noun.md
-      - 语法整理: BLOG/Japanese/grammar.md
+      - �?法整�?: BLOG/Japanese/grammar.md
       - 作文: BLOG/Japanese/essays.md
       - たんたんめん推特: BLOG/Japanese/tantanmen-translation.md
-      - 中文日语: BLOG/Japanese/chinese.md
-    - Leetcode:
-      - TODO ExOS设计: BLOG/OS/os-design.md
-      - fork/exec/spawn: BLOG/OS/fork-exec-spawn.md
-      - fork例: BLOG/OS/fork-example.md
+      - �?文日�?: BLOG/Japanese/chinese.md
+   
     - Linux:
       - vim: BLOG/Linux/vim.md
       - tmux: BLOG/Linux/tmux.md
       - UNIX: BLOG/Linux/unix.md
       - 内核编译: BLOG/Linux/kernel-compile.md
-      - 连接树莓派: BLOG/Linux/pi-start.md
+      - 连接树莓�?: BLOG/Linux/pi-start.md
     - macOS:
-      - 使用tree命令和访达进行任务管理: BLOG/macOS/tree.md
+      - 使用tree命令和�?�达进�?�任务�?�理: BLOG/macOS/tree.md
       - 辅助功能缩放: BLOG/macOS/zoom.md
-      - Mac与Android的文件传输: BLOG/macOS/sharing-mac-android.md
+      - Mac与Android的文件传�?: BLOG/macOS/sharing-mac-android.md
       - MAD制作流程: BLOG/macOS/mad.md
       - OBS开直播: BLOG/macOS/stream.md
     - UOS:
       - 相关链接: BLOG/UOS/links.md
     - Apple:
-      - iPad购买建议: BLOG/Apple/ipad-recommend.md
-      - Mac购买建议: BLOG/Apple/mac-recommend.md
+      - iPad�?买建�?: BLOG/Apple/ipad-recommend.md
+      - Mac�?买建�?: BLOG/Apple/mac-recommend.md
     - GitHub:
       - 镜像到Gitee: BLOG/GitHub/mirror.md
     - Markdown:
-      - Markdown语法初学习: BLOG/Markdown/grammars.md
+      - Markdown�?法初学习: BLOG/Markdown/grammars.md
       - TODO ExMark规范: BLOG/Markdown/ExMark-spec-zh.txt
-      - MkDocs静态网站构建: BLOG/Markdown/mkdocs-site.md
-      - mdBook静态网站构建: BLOG/Markdown/mdbook-site.md
-      - GitHub Pages简介: BLOG/Markdown/github-pages.md
+      - MkDocs静态网站构�?: BLOG/Markdown/mkdocs-site.md
+      - mdBook静态网站构�?: BLOG/Markdown/mdbook-site.md
+      - GitHub Pages简�?: BLOG/Markdown/github-pages.md
     - 电子工程:
       - Verilog仿真: BLOG/ElectronicEngineering/verilog-simulation.md
-      - 各种存储器间的关系: BLOG/ElectronicEngineering/storage.md
+      - 各�?�存储器间的关系: BLOG/ElectronicEngineering/storage.md
       - 二阶线性时不变电路: BLOG/ElectronicEngineering/rlc.md
       - yosys尝试: BLOG/ElectronicEngineering/yosys-try.md
-    - 基础:
-      - 数学:
-        - Latex简易符号: BLOG/Foundation/Math/latex.md
-        - 线性代数笔记: BLOG/Foundation/Math/linear.md
+    - 基�?�:
+      - 数�??:
+        - Latex简易�?�号: BLOG/Foundation/Math/latex.md
+        - 线性代数笔�?: BLOG/Foundation/Math/linear.md
         - 常用泰勒级数: BLOG/Foundation/Math/taylor.md
-        - 最大似然估计: BLOG/Foundation/Math/max-pr.md
+        - 最大似然估�?: BLOG/Foundation/Math/max-pr.md
         - BLOG/Foundation/Math/sympy-det.md
       - 物理:
-        - Gauss公式和Stokes公式: BLOG/Foundation/Physics/guass-stokes.md
-        - 电磁学期末复习: BLOG/Foundation/Physics/electromagnetics.md
+        - Gauss�?式和Stokes�?�?: BLOG/Foundation/Physics/guass-stokes.md
+        - 电�?��?�期�?复习: BLOG/Foundation/Physics/electromagnetics.md
       - 网络:
         - 知识点总结: BLOG/Network/learning.md
         - 专有名词速查: BLOG/Network/nouns.md
         - GraphQL Hasura: BLOG/Network/graphql.md
       - 机器学习:
-        - 动手学深度学习笔记: BLOG/Deeplearning/d2l.md
-        - 语音识别笔记: BLOG/Deeplearning/speech-recognition.md
+        - 动手学深度�?�习笔�??: BLOG/Deeplearning/d2l.md
+        - �?音识�?笔�??: BLOG/Deeplearning/speech-recognition.md
         - 数据加载优化: BLOG/Deeplearning/parallel-load.md
         - DDP:
           - DDP调研: BLOG/Deeplearning/ddp.md
           - ddp-note.py: BLOG/Deeplearning/ddp-note.md
     - 其他:
-      - 视频信息初探: BLOG/Others/video-info.md
+      - 视�?�信�?初探: BLOG/Others/video-info.md
   - Computer Science:
     - DEV/index.md
     - DEV/app-dev-sum.md
@@ -174,86 +182,88 @@ nav:
       - State Management: DEV/Flutter/state-management.md
       - Packages: DEV/Flutter/common-packages.md
     - Xcode:
-      - 新建开发模块: DEV/Xcode/scheme-dev.md
+      - 新建开发模�?: DEV/Xcode/scheme-dev.md
       - Markup Syntax: DEV/Xcode/markup.md
       - 新建文件注释: DEV/Xcode/file-header.md
-      - 常用快捷键: DEV/Xcode/shortcuts.md
+      - 常用�?捷键: DEV/Xcode/shortcuts.md
       - Set Build Number: DEV/Xcode/set-build-number.md
       - Crash Analysis: DEV/Xcode/crash-analysis.md
     - SwiftUI:
       - Data Essentials: DEV/SwiftUI/data-essentials.md
     - AppKit:
-      - 纯代码创建项目: DEV/AppKit/programmatically.md
-      - 苹果平台应用开发之路: DEV/AppKit/road.md
+      - �?代码创建项目: DEV/AppKit/programmatically.md
+      - 苹果平台应用开发之�?: DEV/AppKit/road.md
     - 编程:
-      - 推荐的学习路线: DEV/Programming/recommendation.md
-      - 我对编程语言的感受: DEV/Programming/my-feelings.md
+      - 推荐的�?�习�?�?: DEV/Programming/recommendation.md
+      - 我�?�编程�??言的感�?: DEV/Programming/my-feelings.md
       - Dart:
-        - 学习笔记: DEV/Programming/Dart/learning.md
+        - 学习笔�??: DEV/Programming/Dart/learning.md
       - Swift:
         - 学习资源: DEV/Programming/Swift/learning-resources.md
-        - 基础语法笔记: DEV/Programming/Swift/notes-basic-grammars.md
-        - WORKING LanguageGuide笔记: DEV/Programming/Swift/notes-language-guide.md
-        - WORKING 常用标准库函数笔记: DEV/Programming/Swift/notes-useful-foundation.md
-        - 教学作业: DEV/Programming/Swift/lecture-homework.md
-        - 并行计算: DEV/Programming/Swift/parallel-for.md
+        - 基�?��?法笔�?: DEV/Programming/Swift/notes-basic-grammars.md
+        - WORKING LanguageGuide笔�??: DEV/Programming/Swift/notes-language-guide.md
+        - WORKING 常用标准库函数笔�?: DEV/Programming/Swift/notes-useful-foundation.md
+        - 教�?�作�?: DEV/Programming/Swift/lecture-homework.md
+        - 并�?��?�算: DEV/Programming/Swift/parallel-for.md
       - Python:
-        - 不喜欢Python的理由: DEV/Programming/Python/dislike.md
+        - 不喜�?Python的理�?: DEV/Programming/Python/dislike.md
         - 复制拷贝: DEV/Programming/Python/copy.md
-        - numpy速查表: DEV/Programming/Python/numpy-overview.md
+        - numpy速查�?: DEV/Programming/Python/numpy-overview.md
       - C:
-        - 笔记整理: DEV/Programming/C/review.md
+        - 笔�?�整�?: DEV/Programming/C/review.md
         - 常用函数: DEV/Programming/C/final.md
-        - stdout按行刷新: DEV/Programming/C/stdout-fflush.md
+        - stdout按�?�刷�?: DEV/Programming/C/stdout-fflush.md
         - 二维数组调试: DEV/Programming/C/watch-matrix.md
       - C#:
-        - 学习笔记: DEV/Programming/Csharp/learning.md
+        - 学习笔�??: DEV/Programming/Csharp/learning.md
       - C++:
-        - 1 C++的几个基本问题: DEV/Programming/Cpp/1.md
+        - 1 C++的几�?基本�?�?: DEV/Programming/Cpp/1.md
         - 2 函数重载: DEV/Programming/Cpp/2.md
-        - 3 类: DEV/Programming/Cpp/3.md
-        - 4 操作符重载: DEV/Programming/Cpp/4.md
-        - 5 类的继承与派生: DEV/Programming/Cpp/5.md
+        - 3 �?: DEV/Programming/Cpp/3.md
+        - 4 操作符重�?: DEV/Programming/Cpp/4.md
+        - 5 类的继承与派�?: DEV/Programming/Cpp/5.md
         - 6 模版: DEV/Programming/Cpp/6.md
         - 7 异常处理: DEV/Programming/Cpp/7.md
-        - 8 流类库的输入与输出: DEV/Programming/Cpp/8.md
+        - 8 流类库的输入与输�?: DEV/Programming/Cpp/8.md
         - List: DEV/Programming/Cpp/list.md
         - Stack: DEV/Programming/Cpp/stack.md
-        - 类数据成员: DEV/Programming/Cpp/class-properties.md
+        - 类数�?成员: DEV/Programming/Cpp/class-properties.md
         - Google风格: DEV/Programming/Cpp/google-format.md
         - 考试复习: DEV/Programming/Cpp/final.md
         - OJ技巧和策略: DEV/Programming/Cpp/oj.md
       - MATLAB:
         - MATLAB入门: DEV/Programming/MATLAB/tour.md
-        - 抛硬币的涨落问题: DEV/Programming/MATLAB/coin.md
+        - 抛硬币的涨落�?�?: DEV/Programming/MATLAB/coin.md
         - 命令行MATLAB: DEV/Programming/MATLAB/terminal-matlab.md
     - ExNotes:
-      - ExNotes设计文档: DEV/ExNotes/design.md
+      - ExNotes设�?�文�?: DEV/ExNotes/design.md
       - ExNotes开发考量: DEV/ExNotes/learning.md
   - NKU-OJ:
-    - 2/index.md
-    - 番:
-      - 番剧评价: 2/Anime/anime-rating.md
+    - NKU-OJ/index.md
+    - 1 基础语句和条件分支: 
+      - 四则运算: NKU-OJ\1 基础语句和条件分支\四则运算.md
       - 神作: 2/Anime/anime-rating-extraordinary.md
       - 上乘: 2/Anime/anime-rating-great.md
-      - 好: 2/Anime/anime-rating-good.md
+      - �?: 2/Anime/anime-rating-good.md
       - 补番倾向: 2/Anime/new-anime-criterion.md
-    - 原神:
-      - 计划: 2/Genshin/plan.md
-      - 培养的角色: 2/Genshin/characters.md
+    - 2 循环语句:
+      - 196 二进制求和: NKU-OJ\2 循环语句\196 二进制求和.md
+      - 培养的�?�色: 2/Genshin/characters.md
       - 料理制作: 2/Genshin/food.md
       - 画质设置: 2/Genshin/ipad-pro.md
       - 暴击暴伤配比: 2/Genshin/crit-calculation.md
-      - 频率与概率: 2/Genshin/half-usual.md
-    - 喜欢的:
-      - 插画: 2/Sukina/pictures.md
-      - 二次元女生: 2/Sukina/kawaii.md
+      - 频率与�?�率: 2/Genshin/half-usual.md
+    - 3 数组和字符串:
+      - 207 不重复字符串长度: NKU-OJ\3 数组和字符串\207 不重复字符串长度.md
+      - 二�?�元女生: 2/Sukina/kawaii.md
       - 画师: 2/Sukina/artists.md
       - vtuber: 2/Sukina/vtuber.md
       - 音声: 2/Sukina/voice.md
+    - 题库:
+      - 第一页: NKU-OJ\题库\第一页.md"
   - 物理:
     - 3/index.md
-    - 随笔记:
+    - 随笔�?:
       - 3/Jottings/2211-2212.md
       - 3/Jottings/2209-2210.md
       - 3/Jottings/2207-2208.md
@@ -326,10 +336,10 @@ nav:
       - 3/Articles/18-what-i-love.md
       - 3/Articles/17-dream-2017.md
       - 3/Articles/14-affection-1.md
-    - 文学:
+    - 文�??:
       - 3/Literature/proses.md
       - 3/Literature/poems.md
-    - 个人信息:
+    - �?人信�?:
       - 3/Info/accounts.md
   - 转载:
     - REPRODUCE/index.md
@@ -337,37 +347,40 @@ nav:
     - REPRODUCE/tim-cook-at-duke.md
     - REPRODUCE/my-best-teacher.md
   - 关于:
-    - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 个人履历: ABOUT/cv-full.md
-    - 支持作者: ABOUT/support.md
-    - 文章编写帮助: ABOUT/help.md
+    - ABOUT/index.md # 使用两个index 这样子左上�?��??一次打开会是所有Tab 而不是ABOUT
+    - �?人履�?: ABOUT/cv-full.md
+    - �?持作�?: ABOUT/support.md
+    - 文章编写�?�?: ABOUT/help.md
     - 网站构建: ABOUT/build.md
     - 测试文档: ABOUT/test.md
 
 # [Extensions]
 plugins:
-  - search: # 现在还不支持中文搜索 支持之后可以设置语言
-    # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
+  - search: # 现在还不�?持中文搜�? �?持之后可以�?�置�?言
+    # insider已经�?持中文的分词搜索�? https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
       lang:
         - en
         - ja
-  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+  - tags # 给单篇文章添加标�? https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+  - git-revision-date-localized:
+      enable_creation_date: true
 markdown_extensions:
-  - pymdownx.arithmatex: # latex支持
+  - pymdownx.arithmatex: # latex�?�?
       generic: true
   - attr_list # 给图片后面添加{width="300"}设置大小
   - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
+      permalink: true # 固定标�?�位�?为当前位�?
+  - pymdownx.highlight: # 代码块高�?
       # linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
-  - pymdownx.superfences # 代码块高亮插件
-  - meta # 支持Markdown文件上方自定义标题标签等
+      # auto_title: true # 显示编程�?言名称
+  - pymdownx.superfences # 代码块高�?插件
+  - meta # �?持Markdown文件上方�?定义标�?�标签等
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
-  - pymdownx.details # admonition需要
+  - pymdownx.details # admonition需�?
+  
 
 extra_javascript:
-  # latex支持
+  # latex�?�?
   # check https://squidfunk.github.io/mkdocs-material/reference/mathjax/?h=math for more information
   # notice `curl https://polyfill.io/v3/polyfill.min.js?features=es6 > docs/mkdocs/javascripts/polyfill.min.js && curl https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js > docs/mkdocs/javascripts/tex-mml-chtml.js` not works... because there are other resources that need to load
   - mkdocs/javascripts/mathjax.js
