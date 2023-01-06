@@ -21,7 +21,23 @@ theme:
       accent: orange
       toggle:
         icon: material/weather-sunny
-        name: 切换至日间模式?
+        name: 切换至日间模式
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+
         
   features:
     - navigation.instant
@@ -31,13 +47,14 @@ theme:
     - navigation.expand # 打开Tab时左侧目录全部展开
     - search.suggest # 搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高�?
+    - content.code.annotate 
     
   language: zh # 一些提示性的文字会变成中�?
-  icon:
+icon:
     repo: fontawesome/brands/github
 ##edit_uri: edit/main/docs # 编辑按钮跳转的链�?
 ## [top-right corner]
-repo_url: https://github.com/Meniscus0 # 右上角点击跳�?的链�?
+repo_url: https://github.com/Meniscus0/Blog # 右上角点击跳�?的链�?
 repo_name: Meniscus0 # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2022-2023 Ziheng Zhang  # 左下角的版权声明
@@ -50,18 +67,19 @@ extra:
     - icon: fontawesome/brands/weixin
       link: https://raw.githubusercontent.com/Meniscus0/FigureBed/main/img/b7ad74391aab79e44459cca558a34d3.jpg
       name: 我的微信
-    - icon: fontawesome/brands/github
-      link: https://github.com/Meniscus0
-      name: GitHub | Meniscus0
     - icon: fontawesome/solid/paper-plane
       link: mailto:zzh_cd@126.com
       name: 我的邮箱
+    - icon: fontawesome/brands/github
+      link: https://github.com/Meniscus0
+      name: GitHub | Meniscus0
     
 # [Navigtion]
 nav:
   - 数学:
     - 数学/index.md 
     - 高等数学(上):
+      - 答疑: 数学/高等数学（上）/答疑.md
       - Linux讲座: LECTURE/Linux/linux.md
       - 命令行入门精简�?: LECTURE/Linux/commands-concise.md
     - 高等数学(下):
@@ -238,6 +256,30 @@ nav:
     - ExNotes:
       - ExNotes设�?�文�?: DEV/ExNotes/design.md
       - ExNotes开发考量: DEV/ExNotes/learning.md
+  - 洛谷:
+    - 洛谷/index.md
+    - 入门:
+      - 1顺序结构: 洛谷/入门/1顺序结构.md
+      - 2分支结构: 洛谷/入门/2分支结构.md
+      - 3循环结构: 洛谷/入门/3循环结构.md
+      - 4数组: 洛谷/入门/4数组.md
+      - 5字符串: 洛谷/入门/5字符串.md
+      - 6函数与结构体: 洛谷/入门/6函数与结构体.md
+    - 算法:
+      - 1-1模拟与高精度: 洛谷/算法/1-1模拟与高精度.md
+      - 1-2排序: 洛谷/算法/1-2排序.md
+      - 1-3暴力枚举: 洛谷/算法/1-3暴力枚举.md
+      - 1-4递推与递归: 洛谷/算法/1-4递推与递归.md
+      - 1-5贪心: 洛谷/算法/1-5贪心.md
+      - 1-6二分查找与二分答案: 洛谷/算法/1-6二分查找与二分答案.md
+      - 1-7搜索: 洛谷/算法/1-7搜索.md
+    - 数据结构:
+      - 1-1线性: 洛谷/数据结构/1-1线性表.md
+      - 1-2二叉树: 洛谷/数据结构/1-2二叉树.md
+      - 1-3集合: 洛谷/数据结构/1-3集合.md
+      - 1-4图的基本应用: 洛谷/数据结构/1-4图的基本应用.md
+    
+
   - NKU-OJ:
     - NKU-OJ/index.md
     - 1 基础语句和条件分支: 
@@ -347,7 +389,7 @@ nav:
     - REPRODUCE/tim-cook-at-duke.md
     - REPRODUCE/my-best-teacher.md
   - 关于:
-    - ABOUT/index.md # 使用两个index 这样子左上�?��??一次打开会是所有Tab 而不是ABOUT
+    - 关于/index.md # 使用两个index 这样子左上�?��??一次打开会是所有Tab 而不是ABOUT
     - �?人履�?: ABOUT/cv-full.md
     - �?持作�?: ABOUT/support.md
     - 文章编写�?�?: ABOUT/help.md
@@ -364,19 +406,28 @@ plugins:
   - tags # 给单篇文章添加标�? https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
   - git-revision-date-localized:
       enable_creation_date: true
+  - glightbox
 markdown_extensions:
   - pymdownx.arithmatex: # latex�?�?
       generic: true
   - attr_list # 给图片后面添加{width="300"}设置大小
+  - md_in_html
   - toc:
       permalink: true # 固定标�?�位�?为当前位�?
   - pymdownx.highlight: # 代码块高�?
-      # linenums: true # 显示行号
-      # auto_title: true # 显示编程�?言名称
+       linenums: true # 显示行号
+       #auto_title: true # 显示编程�?言名称
+       anchor_linenums: true
   - pymdownx.superfences # 代码块高�?插件
   - meta # �?持Markdown文件上方�?定义标�?�标签等
   - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
   - pymdownx.details # admonition需�?
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true 
+  
   
 
 extra_javascript:
@@ -386,6 +437,9 @@ extra_javascript:
   - mkdocs/javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # https://cdn.bytedance.com/?query=mathjax&version=3.2.0
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   - mkdocs/css/no-footer.css # 不使用底部的翻页
   - mkdocs/css/unordered-list-symbols.css # multiplt unordered list symbols
