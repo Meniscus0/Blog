@@ -502,6 +502,16 @@
     1.5(未明)
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+    1.6
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17">
+    1.7
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2360,6 +2370,16 @@
     1.5(未明)
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+    1.6
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17">
+    1.7
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -2374,6 +2394,97 @@
 <h2 id="jan">Jan<a class="headerlink" href="#jan" title="Permanent link">¶</a></h2>
 <h3 id="15">1.5(未明)<a class="headerlink" href="#15" title="Permanent link">¶</a></h3>
 <p><strong>字典树</strong></p>
+<h3 id="16">1.6<a class="headerlink" href="#16" title="Permanent link">¶</a></h3>
+<p>方法一：暴力枚举，把i赋值给x以防影响i的遍历，利用%10不断获取个位，得到个位后除10，让个位变成小数，int 向下取整，消去个位，直到只剩个位。</p>
+<p>空间复杂度，每次只操作一个数，O(1)；</p>
+<p>事假复杂度：枚举num次，<strong>判断每个正整数个位数字之和是否为偶数O(log num)</strong></p>
+<p>,一共是<em>O</em>(<em>num</em>×log <em>num</em>)</p>
+<p>方法二：数学，</p>
+<p>前半个区间总能产生5y个数，通过while统计y的各数位之和，再加上个位的，即可，因为除法向下取整，别忘了+1来满足向上取整</p>
+<p>y表示10的个数，x表示1的个数。</p>
+<p>从特殊到一般，</p>
+<p><strong>区间 [10×<em>y</em>+0,10×<em>y</em>+<em>x</em>]</strong></p>
+<p>y的个位数字之和为奇数，个位从0到7，奇偶各一半，总的各位之和为偶是x/2个；</p>
+<p>y的个位数字之和为偶数，个位从0到6，奇数3个，偶4个，总的各位之和为偶是x/2  +1个；</p>
+<p><strong>区间 <em>[0,10×</em>y*+0)</strong></p>
+<p>表示为10×<em>t</em>+<em>g</em> ， t在0到y-1之间滑动，一共能滑动y次，每次滑动出一个值之后，g从0到9取值，奇偶对半，五五开。奇数+奇数，偶数加偶数才能为偶，所以每次滑动都有一半的g 能满足题意。共有y*5个数。</p>
+<p>区间里多加了0，不是正数，return时别 忘了-1；</p>
+<h3 id="17">1.7<a class="headerlink" href="#17" title="Permanent link">¶</a></h3>
+<p>思路：被移除的前缀lsum和后缀rsum之和为x</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minOperations</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="c1">//累加求和，头两个形参指定要累加的元素范围，第三个形参则是累加的初值。</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accumulate</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="c1">//排除特殊情况</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="c1">//选择了整个数组作为后缀，得出了right和rsum的值</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">lsum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">rsum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="c1">//最多移动n次，把值赋大，方便待会min（）</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1">//空前缀开始，</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">left</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="c1">//每次循环前缀和加上该值</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">                </span><span class="n">lsum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">left</span><span class="p">];</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="c1">//一直减去右缀，右缀向右移动，直到总缀之和小于等于x</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">lsum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rsum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">                </span><span class="n">rsum</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">right</span><span class="p">];</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">                </span><span class="o">++</span><span class="n">right</span><span class="p">;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">            </span><span class="n">如果满足条件</span><span class="err">，</span><span class="n">取左缀下标加一</span><span class="err">，</span><span class="n">再加上right到右边界的距离</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lsum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rsum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">                </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">right</span><span class="p">));</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="c1">//ans小于等于最大移动次数时才会被return</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="p">};</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="n">作者</span><span class="err">：</span><span class="n">LeetCode</span><span class="o">-</span><span class="n">Solution</span>
+</code></pre></div></td></tr></table></div>
 <hr/>
 <div class="md-source-file">
 <small>
