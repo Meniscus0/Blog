@@ -7,22 +7,22 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="张梓恒的个人网站" name="description"/>
 <meta content="张梓恒" name="author"/>
-<link href="https://Meniscus0.github.io/Blog/%E6%B4%9B%E8%B0%B7/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1-2%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="canonical"/>
-<link href="../1-1%E7%BA%BF%E6%80%A7%E8%A1%A8/" rel="prev"/>
-<link href="../1-3%E9%9B%86%E5%90%88/" rel="next"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://Meniscus0.github.io/Blog/CS/" rel="canonical"/>
+<link href="../%E7%AE%97%E6%B3%95/Leetcode/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" rel="prev"/>
+<link href="C%2B%2B/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.2" name="generator"/>
-<title>1-2二叉树 - 张梓恒的个人网站，一个开源的知识共享平台</title>
-<link href="../../../assets/stylesheets/main.574901e1.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<title>Computer Science - 张梓恒的个人网站，一个开源的知识共享平台</title>
+<link href="../assets/stylesheets/main.574901e1.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 0 1 .25-.25h5.025a.25.25 0 0 1 .177.073l6.25 6.25a.25.25 0 0 1 0 .354l-5.025 5.025a.25.25 0 0 1-.354 0l-6.25-6.25a.25.25 0 0 1-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775zM6 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 0 1 .25-.25h8.5a.25.25 0 0 1 .25.25v7.736a.75.75 0 1 0 1.5 0V1.75A1.75 1.75 0 0 0 11.25 0h-8.5A1.75 1.75 0 0 0 1 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 0 0 0-1.5H2.75a.25.25 0 0 1-.25-.25V1.75zM4.75 4a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5zM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75zm11.774 3.537a.75.75 0 0 0-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 0 0-1.062 1.058l1.943 1.95a.75.75 0 0 0 1.055.008l4.557-4.45z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm6.5-.25A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75zM8 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.489 4.489 0 0 1-.563-1.191 3.833 3.833 0 0 1-.05-2.063 4.636 4.636 0 0 1-2.025-.293.75.75 0 1 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.748.748 0 0 1 1.06 0 .75.75 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.404 2.404 0 0 1-.507-.441 3.063 3.063 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.753.753 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768a85.08 85.08 0 0 0-.317-.265c-.814-.68-1.75-1.462-2.692-2.619a3.74 3.74 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575L6.457 1.047zM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-.25-5.25a.75.75 0 0 0-1.5 0v2.5a.75.75 0 0 0 1.5 0v-2.5z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M3.404 12.596a6.5 6.5 0 1 1 9.192-9.192 6.5 6.5 0 0 1-9.192 9.192zM2.344 2.343a8 8 0 1 0 11.313 11.314A8 8 0 0 0 2.343 2.343zM6.03 4.97a.75.75 0 0 0-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 1 0 1.06 1.06L8 9.06l1.97 1.97a.75.75 0 1 0 1.06-1.06L9.06 8l1.97-1.97a.75.75 0 1 0-1.06-1.06L8 6.94 6.03 4.97z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.561 1.5a.016.016 0 0 0-.01.004L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.02.02 0 0 0-.004-.009.02.02 0 0 0-.006-.006L10.56 1.5zM9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.492 3.492 0 0 1 2.441 0l.999-1a.75.75 0 1 1 1.06 1.061l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.013 5.013 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.684 1.684 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06zM6.173 5h3.654A.173.173 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173zM5.25 6.5a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75h-5.5z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458L5 5.782zM9.5 2.5h-3V6a.75.75 0 0 1-.117.403L4.73 9h6.54L9.617 6.403A.75.75 0 0 1 9.5 6V2.5zm-6.9 9.847L3.775 10.5h8.45l1.175 1.847a.75.75 0 0 1-.633 1.153H3.233a.75.75 0 0 1-.633-1.153z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.75 2.5a.75.75 0 0 0 0 1.5h10.5a.75.75 0 0 0 0-1.5H1.75zm4 5a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5zm0 5a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5zM2.5 7.75a.75.75 0 0 0-1.5 0v6a.75.75 0 0 0 1.5 0v-6z"/></svg>');}</style>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../../mkdocs/css/no-footer.css" rel="stylesheet"/>
-<link href="../../../mkdocs/css/unordered-list-symbols.css" rel="stylesheet"/>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../mkdocs/css/no-footer.css" rel="stylesheet"/>
+<link href="../mkdocs/css/unordered-list-symbols.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -33,19 +33,22 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="orange" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#computer-science">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="张梓恒的个人网站，一个开源的知识共享平台" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="张梓恒的个人网站，一个开源的知识共享平台">
+<a aria-label="张梓恒的个人网站，一个开源的知识共享平台" class="md-header__button md-logo" data-md-component="logo" href=".." title="张梓恒的个人网站，一个开源的知识共享平台">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -61,7 +64,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              1-2二叉树
+              Computer Science
             
           </span>
 </div>
@@ -125,42 +128,42 @@
 <div class="md-tabs__inner md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../%E6%95%B0%E5%AD%A6/">
+<a class="md-tabs__link" href="../%E6%95%B0%E5%AD%A6/">
         数学
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../%E7%AE%97%E6%B3%95/">
+<a class="md-tabs__link" href="../%E7%AE%97%E6%B3%95/">
         算法
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../CS/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         Computer Science
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../">
+<a class="md-tabs__link" href="../%E6%B4%9B%E8%B0%B7/">
         洛谷
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../NKU-OJ/">
+<a class="md-tabs__link" href="../NKU-OJ/">
         NKU-OJ
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../3/index.md">
+<a class="md-tabs__link" href="../3/index.md">
         物理
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../REPRODUCE/index.md">
+<a class="md-tabs__link" href="../REPRODUCE/index.md">
         转载
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../%E5%85%B3%E4%BA%8E/">
+<a class="md-tabs__link" href="../%E5%85%B3%E4%BA%8E/">
         关于
       </a>
 </li>
@@ -174,7 +177,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="张梓恒的个人网站，一个开源的知识共享平台" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="张梓恒的个人网站，一个开源的知识共享平台">
+<a aria-label="张梓恒的个人网站，一个开源的知识共享平台" class="md-nav__button md-logo" data-md-component="logo" href=".." title="张梓恒的个人网站，一个开源的知识共享平台">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     张梓恒的个人网站，一个开源的知识共享平台
@@ -193,7 +196,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../%E6%95%B0%E5%AD%A6/">数学</a>
+<a href="../%E6%95%B0%E5%AD%A6/">数学</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -217,17 +220,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%EF%BC%88%E4%B8%8A%EF%BC%89/%E7%AD%94%E7%96%91/">
+<a class="md-nav__link" href="../%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%EF%BC%88%E4%B8%8A%EF%BC%89/%E7%AD%94%E7%96%91/">
         答疑
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Linux/linux.md">
+<a class="md-nav__link" href="../LECTURE/Linux/linux.md">
         Linux讲座
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Linux/commands-concise.md">
+<a class="md-nav__link" href="../LECTURE/Linux/commands-concise.md">
         命令行入门精简�?
       </a>
 </li>
@@ -247,12 +250,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Markdown/markdown.md">
+<a class="md-nav__link" href="../LECTURE/Markdown/markdown.md">
         Markdown讲座
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Markdown/vscode-extension.md">
+<a class="md-nav__link" href="../LECTURE/Markdown/vscode-extension.md">
         VSCode及插件安装?
       </a>
 </li>
@@ -272,22 +275,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Git/git.md">
+<a class="md-nav__link" href="../LECTURE/Git/git.md">
         Git
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Git/git-demos.md">
+<a class="md-nav__link" href="../LECTURE/Git/git-demos.md">
         Git例子
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Git/git-teamwork.md">
+<a class="md-nav__link" href="../LECTURE/Git/git-teamwork.md">
         Git合作
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Git/windows-install.md">
+<a class="md-nav__link" href="../LECTURE/Git/windows-install.md">
         Windows安�?�Git
       </a>
 </li>
@@ -295,7 +298,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/App/app-design.md">
+<a class="md-nav__link" href="../LECTURE/App/app-design.md">
         离散数学
       </a>
 </li>
@@ -312,17 +315,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Flutter/macos-simulator-ios.md">
+<a class="md-nav__link" href="../LECTURE/Flutter/macos-simulator-ios.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Flutter/macos-simulator-android.md">
+<a class="md-nav__link" href="../LECTURE/Flutter/macos-simulator-android.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/Flutter/221120-consideration.md">
+<a class="md-nav__link" href="../LECTURE/Flutter/221120-consideration.md">
         None
       </a>
 </li>
@@ -342,62 +345,62 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/0_about.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/0_about.md">
         0 介绍
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/1_前言和�?�程说明.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/1_前言和�?�程说明.md">
         1 前言和�?�程说明
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/2_认识macOS的文件系�?.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/2_认识macOS的文件系�?.md">
         2 认识macOS的文件系�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/3_认识程序.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/3_认识程序.md">
         3 认识程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/4_认识终�??和shell.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/4_认识终�??和shell.md">
         4 认识终�??和shell
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/5_开启VSCode的大�?.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/5_开启VSCode的大�?.md">
         5 开启VSCode的大�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/6_VSCode代码运�?�自动化.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/6_VSCode代码运�?�自动化.md">
         6 VSCode代码运�?�自动化
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/7_用VSCode调试Cpp代码.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/7_用VSCode调试Cpp代码.md">
         7 用VSCode调试Cpp代码
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/8_课程回顾.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/8_课程回顾.md">
         8 课程回顾
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/9_others.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/9_others.md">
         其他
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/10_极速版.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/10_极速版.md">
         极速版
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-cpp/11_补充.md">
+<a class="md-nav__link" href="../LECTURE/vscode-cpp/11_补充.md">
         补充
       </a>
 </li>
@@ -405,12 +408,12 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/vscode-python/vscode-python.md">
+<a class="md-nav__link" href="../LECTURE/vscode-python/vscode-python.md">
         在macOS上用VSCode写Python
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../LECTURE/English/phonetic-symbol.md">
+<a class="md-nav__link" href="../LECTURE/English/phonetic-symbol.md">
         英�??音标教�??
       </a>
 </li>
@@ -420,7 +423,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../%E7%AE%97%E6%B3%95/">算法</a>
+<a href="../%E7%AE%97%E6%B3%95/">算法</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -444,17 +447,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../%E7%AE%97%E6%B3%95/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/%E8%AE%AD%E7%BB%83%E8%90%A5/">
+<a class="md-nav__link" href="../%E7%AE%97%E6%B3%95/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/%E8%AE%AD%E7%BB%83%E8%90%A5/">
         训练营
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../%E7%AE%97%E6%B3%95/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+<a class="md-nav__link" href="../%E7%AE%97%E6%B3%95/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
         时间复杂度
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/ComputerGraphics/blender-notes.md">
+<a class="md-nav__link" href="../BLOG/ComputerGraphics/blender-notes.md">
         Blender
       </a>
 </li>
@@ -474,17 +477,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../%E7%AE%97%E6%B3%95/Leetcode/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">
+<a class="md-nav__link" href="../%E7%AE%97%E6%B3%95/Leetcode/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/">
         每日一题
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../算法/Leetcode/周赛.md">
+<a class="md-nav__link" href="../算法/Leetcode/周赛.md">
         周赛
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../算法/Leetcode/双周赛.md">
+<a class="md-nav__link" href="../算法/Leetcode/双周赛.md">
         双周赛
       </a>
 </li>
@@ -504,22 +507,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Game/unity-notes.md">
+<a class="md-nav__link" href="../BLOG/Game/unity-notes.md">
         Unity
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Game/ue-notes.md">
+<a class="md-nav__link" href="../BLOG/Game/ue-notes.md">
         UE
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Game/what-is-game.md">
+<a class="md-nav__link" href="../BLOG/Game/what-is-game.md">
         定义
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Game/2d-vs-3d.md">
+<a class="md-nav__link" href="../BLOG/Game/2d-vs-3d.md">
         2D�?3D
       </a>
 </li>
@@ -539,52 +542,52 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/notes-2202-2203.md">
+<a class="md-nav__link" href="../BLOG/Japanese/notes-2202-2203.md">
         笔�??2/3
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/notes-2204.md">
+<a class="md-nav__link" href="../BLOG/Japanese/notes-2204.md">
         笔�??4
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/notes-2205.md">
+<a class="md-nav__link" href="../BLOG/Japanese/notes-2205.md">
         笔�??5
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/verb.md">
+<a class="md-nav__link" href="../BLOG/Japanese/verb.md">
         动词整理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/adj.md">
+<a class="md-nav__link" href="../BLOG/Japanese/adj.md">
         形�?�词整理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/noun.md">
+<a class="md-nav__link" href="../BLOG/Japanese/noun.md">
         名词整理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/grammar.md">
+<a class="md-nav__link" href="../BLOG/Japanese/grammar.md">
         �?法整�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/essays.md">
+<a class="md-nav__link" href="../BLOG/Japanese/essays.md">
         作文
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/tantanmen-translation.md">
+<a class="md-nav__link" href="../BLOG/Japanese/tantanmen-translation.md">
         たんたんめん推特
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Japanese/chinese.md">
+<a class="md-nav__link" href="../BLOG/Japanese/chinese.md">
         �?文日�?
       </a>
 </li>
@@ -604,27 +607,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Linux/vim.md">
+<a class="md-nav__link" href="../BLOG/Linux/vim.md">
         vim
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Linux/tmux.md">
+<a class="md-nav__link" href="../BLOG/Linux/tmux.md">
         tmux
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Linux/unix.md">
+<a class="md-nav__link" href="../BLOG/Linux/unix.md">
         UNIX
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Linux/kernel-compile.md">
+<a class="md-nav__link" href="../BLOG/Linux/kernel-compile.md">
         内核编译
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Linux/pi-start.md">
+<a class="md-nav__link" href="../BLOG/Linux/pi-start.md">
         连接树莓�?
       </a>
 </li>
@@ -644,27 +647,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/macOS/tree.md">
+<a class="md-nav__link" href="../BLOG/macOS/tree.md">
         使用tree命令和�?�达进�?�任务�?�理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/macOS/zoom.md">
+<a class="md-nav__link" href="../BLOG/macOS/zoom.md">
         辅助功能缩放
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/macOS/sharing-mac-android.md">
+<a class="md-nav__link" href="../BLOG/macOS/sharing-mac-android.md">
         Mac与Android的文件传�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/macOS/mad.md">
+<a class="md-nav__link" href="../BLOG/macOS/mad.md">
         MAD制作流程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/macOS/stream.md">
+<a class="md-nav__link" href="../BLOG/macOS/stream.md">
         OBS开直播
       </a>
 </li>
@@ -684,7 +687,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/UOS/links.md">
+<a class="md-nav__link" href="../BLOG/UOS/links.md">
         相关链接
       </a>
 </li>
@@ -704,12 +707,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Apple/ipad-recommend.md">
+<a class="md-nav__link" href="../BLOG/Apple/ipad-recommend.md">
         iPad�?买建�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Apple/mac-recommend.md">
+<a class="md-nav__link" href="../BLOG/Apple/mac-recommend.md">
         Mac�?买建�?
       </a>
 </li>
@@ -729,7 +732,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/GitHub/mirror.md">
+<a class="md-nav__link" href="../BLOG/GitHub/mirror.md">
         镜像到Gitee
       </a>
 </li>
@@ -749,27 +752,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Markdown/grammars.md">
+<a class="md-nav__link" href="../BLOG/Markdown/grammars.md">
         Markdown�?法初学习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Markdown/ExMark-spec-zh.txt">
+<a class="md-nav__link" href="../BLOG/Markdown/ExMark-spec-zh.txt">
         TODO ExMark规范
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Markdown/mkdocs-site.md">
+<a class="md-nav__link" href="../BLOG/Markdown/mkdocs-site.md">
         MkDocs静态网站构�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Markdown/mdbook-site.md">
+<a class="md-nav__link" href="../BLOG/Markdown/mdbook-site.md">
         mdBook静态网站构�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Markdown/github-pages.md">
+<a class="md-nav__link" href="../BLOG/Markdown/github-pages.md">
         GitHub Pages简�?
       </a>
 </li>
@@ -789,22 +792,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/ElectronicEngineering/verilog-simulation.md">
+<a class="md-nav__link" href="../BLOG/ElectronicEngineering/verilog-simulation.md">
         Verilog仿真
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/ElectronicEngineering/storage.md">
+<a class="md-nav__link" href="../BLOG/ElectronicEngineering/storage.md">
         各�?�存储器间的关系
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/ElectronicEngineering/rlc.md">
+<a class="md-nav__link" href="../BLOG/ElectronicEngineering/rlc.md">
         二阶线性时不变电路
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/ElectronicEngineering/yosys-try.md">
+<a class="md-nav__link" href="../BLOG/ElectronicEngineering/yosys-try.md">
         yosys尝试
       </a>
 </li>
@@ -836,27 +839,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Math/latex.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Math/latex.md">
         Latex简易�?�号
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Math/linear.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Math/linear.md">
         线性代数笔�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Math/taylor.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Math/taylor.md">
         常用泰勒级数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Math/max-pr.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Math/max-pr.md">
         最大似然估�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Math/sympy-det.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Math/sympy-det.md">
         None
       </a>
 </li>
@@ -876,12 +879,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Physics/guass-stokes.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Physics/guass-stokes.md">
         Gauss�?式和Stokes�?�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Foundation/Physics/electromagnetics.md">
+<a class="md-nav__link" href="../BLOG/Foundation/Physics/electromagnetics.md">
         电�?��?�期�?复习
       </a>
 </li>
@@ -901,17 +904,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Network/learning.md">
+<a class="md-nav__link" href="../BLOG/Network/learning.md">
         知识点总结
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Network/nouns.md">
+<a class="md-nav__link" href="../BLOG/Network/nouns.md">
         专有名词速查
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Network/graphql.md">
+<a class="md-nav__link" href="../BLOG/Network/graphql.md">
         GraphQL Hasura
       </a>
 </li>
@@ -931,17 +934,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Deeplearning/d2l.md">
+<a class="md-nav__link" href="../BLOG/Deeplearning/d2l.md">
         动手学深度�?�习笔�??
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Deeplearning/speech-recognition.md">
+<a class="md-nav__link" href="../BLOG/Deeplearning/speech-recognition.md">
         �?音识�?笔�??
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Deeplearning/parallel-load.md">
+<a class="md-nav__link" href="../BLOG/Deeplearning/parallel-load.md">
         数据加载优化
       </a>
 </li>
@@ -958,12 +961,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Deeplearning/ddp.md">
+<a class="md-nav__link" href="../BLOG/Deeplearning/ddp.md">
         DDP调研
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Deeplearning/ddp-note.md">
+<a class="md-nav__link" href="../BLOG/Deeplearning/ddp-note.md">
         ddp-note.py
       </a>
 </li>
@@ -989,7 +992,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../BLOG/Others/video-info.md">
+<a class="md-nav__link" href="../BLOG/Others/video-info.md">
         视�?�信�?初探
       </a>
 </li>
@@ -999,10 +1002,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../../../CS/">Computer Science</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">Computer Science</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1026,27 +1029,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../CS/C%2B%2B/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/">
+<a class="md-nav__link" href="C%2B%2B/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/">
         书籍推荐
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Flutter/dart-lint.md">
+<a class="md-nav__link" href="../DEV/Flutter/dart-lint.md">
         Dart linter
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Flutter/template.md">
+<a class="md-nav__link" href="../DEV/Flutter/template.md">
         Template
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Flutter/state-management.md">
+<a class="md-nav__link" href="../DEV/Flutter/state-management.md">
         State Management
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Flutter/common-packages.md">
+<a class="md-nav__link" href="../DEV/Flutter/common-packages.md">
         Packages
       </a>
 </li>
@@ -1066,32 +1069,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Xcode/scheme-dev.md">
+<a class="md-nav__link" href="../DEV/Xcode/scheme-dev.md">
         新建开发模�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Xcode/markup.md">
+<a class="md-nav__link" href="../DEV/Xcode/markup.md">
         Markup Syntax
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Xcode/file-header.md">
+<a class="md-nav__link" href="../DEV/Xcode/file-header.md">
         新建文件注释
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Xcode/shortcuts.md">
+<a class="md-nav__link" href="../DEV/Xcode/shortcuts.md">
         常用�?捷键
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Xcode/set-build-number.md">
+<a class="md-nav__link" href="../DEV/Xcode/set-build-number.md">
         Set Build Number
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Xcode/crash-analysis.md">
+<a class="md-nav__link" href="../DEV/Xcode/crash-analysis.md">
         Crash Analysis
       </a>
 </li>
@@ -1111,7 +1114,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/SwiftUI/data-essentials.md">
+<a class="md-nav__link" href="../DEV/SwiftUI/data-essentials.md">
         Data Essentials
       </a>
 </li>
@@ -1131,12 +1134,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/AppKit/programmatically.md">
+<a class="md-nav__link" href="../DEV/AppKit/programmatically.md">
         �?代码创建项目
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/AppKit/road.md">
+<a class="md-nav__link" href="../DEV/AppKit/road.md">
         苹果平台应用开发之�?
       </a>
 </li>
@@ -1156,12 +1159,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/recommendation.md">
+<a class="md-nav__link" href="../DEV/Programming/recommendation.md">
         推荐的�?�习�?�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/my-feelings.md">
+<a class="md-nav__link" href="../DEV/Programming/my-feelings.md">
         我�?�编程�??言的感�?
       </a>
 </li>
@@ -1178,7 +1181,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Dart/learning.md">
+<a class="md-nav__link" href="../DEV/Programming/Dart/learning.md">
         学习笔�??
       </a>
 </li>
@@ -1198,32 +1201,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Swift/learning-resources.md">
+<a class="md-nav__link" href="../DEV/Programming/Swift/learning-resources.md">
         学习资源
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Swift/notes-basic-grammars.md">
+<a class="md-nav__link" href="../DEV/Programming/Swift/notes-basic-grammars.md">
         基�?��?法笔�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Swift/notes-language-guide.md">
+<a class="md-nav__link" href="../DEV/Programming/Swift/notes-language-guide.md">
         WORKING LanguageGuide笔�??
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Swift/notes-useful-foundation.md">
+<a class="md-nav__link" href="../DEV/Programming/Swift/notes-useful-foundation.md">
         WORKING 常用标准库函数笔�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Swift/lecture-homework.md">
+<a class="md-nav__link" href="../DEV/Programming/Swift/lecture-homework.md">
         教�?�作�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Swift/parallel-for.md">
+<a class="md-nav__link" href="../DEV/Programming/Swift/parallel-for.md">
         并�?��?�算
       </a>
 </li>
@@ -1243,17 +1246,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Python/dislike.md">
+<a class="md-nav__link" href="../DEV/Programming/Python/dislike.md">
         不喜�?Python的理�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Python/copy.md">
+<a class="md-nav__link" href="../DEV/Programming/Python/copy.md">
         复制拷贝
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Python/numpy-overview.md">
+<a class="md-nav__link" href="../DEV/Programming/Python/numpy-overview.md">
         numpy速查�?
       </a>
 </li>
@@ -1273,22 +1276,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/C/review.md">
+<a class="md-nav__link" href="../DEV/Programming/C/review.md">
         笔�?�整�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/C/final.md">
+<a class="md-nav__link" href="../DEV/Programming/C/final.md">
         常用函数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/C/stdout-fflush.md">
+<a class="md-nav__link" href="../DEV/Programming/C/stdout-fflush.md">
         stdout按�?�刷�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/C/watch-matrix.md">
+<a class="md-nav__link" href="../DEV/Programming/C/watch-matrix.md">
         二维数组调试
       </a>
 </li>
@@ -1308,7 +1311,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Csharp/learning.md">
+<a class="md-nav__link" href="../DEV/Programming/Csharp/learning.md">
         学习笔�??
       </a>
 </li>
@@ -1328,72 +1331,72 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/1.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/1.md">
         1 C++的几�?基本�?�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/2.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/2.md">
         2 函数重载
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/3.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/3.md">
         3 �?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/4.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/4.md">
         4 操作符重�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/5.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/5.md">
         5 类的继承与派�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/6.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/6.md">
         6 模版
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/7.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/7.md">
         7 异常处理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/8.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/8.md">
         8 流类库的输入与输�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/list.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/list.md">
         List
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/stack.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/stack.md">
         Stack
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/class-properties.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/class-properties.md">
         类数�?成员
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/google-format.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/google-format.md">
         Google风格
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/final.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/final.md">
         考试复习
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/Cpp/oj.md">
+<a class="md-nav__link" href="../DEV/Programming/Cpp/oj.md">
         OJ技巧和策略
       </a>
 </li>
@@ -1413,17 +1416,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/MATLAB/tour.md">
+<a class="md-nav__link" href="../DEV/Programming/MATLAB/tour.md">
         MATLAB入门
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/MATLAB/coin.md">
+<a class="md-nav__link" href="../DEV/Programming/MATLAB/coin.md">
         抛硬币的涨落�?�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/Programming/MATLAB/terminal-matlab.md">
+<a class="md-nav__link" href="../DEV/Programming/MATLAB/terminal-matlab.md">
         命令行MATLAB
       </a>
 </li>
@@ -1446,12 +1449,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/ExNotes/design.md">
+<a class="md-nav__link" href="../DEV/ExNotes/design.md">
         ExNotes设�?�文�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../DEV/ExNotes/learning.md">
+<a class="md-nav__link" href="../DEV/ExNotes/learning.md">
         ExNotes开发考量
       </a>
 </li>
@@ -1461,10 +1464,10 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../">洛谷</a>
+<a href="../%E6%B4%9B%E8%B0%B7/">洛谷</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1488,32 +1491,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%A5%E9%97%A8/1%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E5%85%A5%E9%97%A8/1%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/">
         1顺序结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%A5%E9%97%A8/2%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E5%85%A5%E9%97%A8/2%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">
         2分支结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%A5%E9%97%A8/3%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E5%85%A5%E9%97%A8/3%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">
         3循环结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%A5%E9%97%A8/4%E6%95%B0%E7%BB%84/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E5%85%A5%E9%97%A8/4%E6%95%B0%E7%BB%84/">
         4数组
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%A5%E9%97%A8/5%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E5%85%A5%E9%97%A8/5%E5%AD%97%E7%AC%A6%E4%B8%B2/">
         5字符串
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E5%85%A5%E9%97%A8/6%E5%87%BD%E6%95%B0%E4%B8%8E%E7%BB%93%E6%9E%84%E4%BD%93/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E5%85%A5%E9%97%A8/6%E5%87%BD%E6%95%B0%E4%B8%8E%E7%BB%93%E6%9E%84%E4%BD%93/">
         6函数与结构体
       </a>
 </li>
@@ -1533,45 +1536,45 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-1%E6%A8%A1%E6%8B%9F%E4%B8%8E%E9%AB%98%E7%B2%BE%E5%BA%A6/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-1%E6%A8%A1%E6%8B%9F%E4%B8%8E%E9%AB%98%E7%B2%BE%E5%BA%A6/">
         1-1模拟与高精度
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-2%E6%8E%92%E5%BA%8F/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-2%E6%8E%92%E5%BA%8F/">
         1-2排序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-3%E6%9A%B4%E5%8A%9B%E6%9E%9A%E4%B8%BE/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-3%E6%9A%B4%E5%8A%9B%E6%9E%9A%E4%B8%BE/">
         1-3暴力枚举
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-4%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-4%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/">
         1-4递推与递归
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-5%E8%B4%AA%E5%BF%83/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-5%E8%B4%AA%E5%BF%83/">
         1-5贪心
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-6%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%B8%8E%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-6%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E4%B8%8E%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/">
         1-6二分查找与二分答案
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../%E7%AE%97%E6%B3%95/1-7%E6%90%9C%E7%B4%A2/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E7%AE%97%E6%B3%95/1-7%E6%90%9C%E7%B4%A2/">
         1-7搜索
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_4">
           数据结构
           <span class="md-nav__icon md-icon"></span>
@@ -1583,23 +1586,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1-1%E7%BA%BF%E6%80%A7%E8%A1%A8/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1-1%E7%BA%BF%E6%80%A7%E8%A1%A8/">
         1-1线性
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1-2%E4%BA%8C%E5%8F%89%E6%A0%91/">
         1-2二叉树
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1-3%E9%9B%86%E5%90%88/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1-3%E9%9B%86%E5%90%88/">
         1-3集合
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../1-4%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/">
+<a class="md-nav__link" href="../%E6%B4%9B%E8%B0%B7/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1-4%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8/">
         1-4图的基本应用
       </a>
 </li>
@@ -1612,7 +1614,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../NKU-OJ/">NKU-OJ</a>
+<a href="../NKU-OJ/">NKU-OJ</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1636,27 +1638,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../NKU-OJ/1%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../NKU-OJ/1%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5%E5%92%8C%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF/%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/">
         四则运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Anime/anime-rating-extraordinary.md">
+<a class="md-nav__link" href="../2/Anime/anime-rating-extraordinary.md">
         神作
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Anime/anime-rating-great.md">
+<a class="md-nav__link" href="../2/Anime/anime-rating-great.md">
         上乘
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Anime/anime-rating-good.md">
+<a class="md-nav__link" href="../2/Anime/anime-rating-good.md">
         �?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Anime/new-anime-criterion.md">
+<a class="md-nav__link" href="../2/Anime/new-anime-criterion.md">
         补番倾向
       </a>
 </li>
@@ -1676,32 +1678,32 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../NKU-OJ/2%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/196%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/">
+<a class="md-nav__link" href="../NKU-OJ/2%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/196%20%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/">
         196 二进制求和
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Genshin/characters.md">
+<a class="md-nav__link" href="../2/Genshin/characters.md">
         培养的�?�色
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Genshin/food.md">
+<a class="md-nav__link" href="../2/Genshin/food.md">
         料理制作
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Genshin/ipad-pro.md">
+<a class="md-nav__link" href="../2/Genshin/ipad-pro.md">
         画质设置
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Genshin/crit-calculation.md">
+<a class="md-nav__link" href="../2/Genshin/crit-calculation.md">
         暴击暴伤配比
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Genshin/half-usual.md">
+<a class="md-nav__link" href="../2/Genshin/half-usual.md">
         频率与�?�率
       </a>
 </li>
@@ -1721,27 +1723,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../NKU-OJ/3%20%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/207%20%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6/">
+<a class="md-nav__link" href="../NKU-OJ/3%20%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/207%20%E4%B8%8D%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6/">
         207 不重复字符串长度
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Sukina/kawaii.md">
+<a class="md-nav__link" href="../2/Sukina/kawaii.md">
         二�?�元女生
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Sukina/artists.md">
+<a class="md-nav__link" href="../2/Sukina/artists.md">
         画师
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Sukina/vtuber.md">
+<a class="md-nav__link" href="../2/Sukina/vtuber.md">
         vtuber
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../2/Sukina/voice.md">
+<a class="md-nav__link" href="../2/Sukina/voice.md">
         音声
       </a>
 </li>
@@ -1761,7 +1763,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a "="" class="md-nav__link" href="../../../NKU-OJ/题库/第一页.md">
+<a "="" class="md-nav__link" href="../NKU-OJ/题库/第一页.md">
         第一页
       </a>
 </li>
@@ -1784,7 +1786,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/index.md">
+<a class="md-nav__link" href="../3/index.md">
         None
       </a>
 </li>
@@ -1801,122 +1803,122 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2211-2212.md">
+<a class="md-nav__link" href="../3/Jottings/2211-2212.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2209-2210.md">
+<a class="md-nav__link" href="../3/Jottings/2209-2210.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2207-2208.md">
+<a class="md-nav__link" href="../3/Jottings/2207-2208.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2205-2206.md">
+<a class="md-nav__link" href="../3/Jottings/2205-2206.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2203-2204.md">
+<a class="md-nav__link" href="../3/Jottings/2203-2204.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2201-2202.md">
+<a class="md-nav__link" href="../3/Jottings/2201-2202.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2111-2112.md">
+<a class="md-nav__link" href="../3/Jottings/2111-2112.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2109-2110.md">
+<a class="md-nav__link" href="../3/Jottings/2109-2110.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2107-2108.md">
+<a class="md-nav__link" href="../3/Jottings/2107-2108.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2105-2106.md">
+<a class="md-nav__link" href="../3/Jottings/2105-2106.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2103-2104.md">
+<a class="md-nav__link" href="../3/Jottings/2103-2104.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2101-2102.md">
+<a class="md-nav__link" href="../3/Jottings/2101-2102.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2011-2012.md">
+<a class="md-nav__link" href="../3/Jottings/2011-2012.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2009-2010.md">
+<a class="md-nav__link" href="../3/Jottings/2009-2010.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2007-2008.md">
+<a class="md-nav__link" href="../3/Jottings/2007-2008.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2005-2006.md">
+<a class="md-nav__link" href="../3/Jottings/2005-2006.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2003-2004.md">
+<a class="md-nav__link" href="../3/Jottings/2003-2004.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/2001-2002.md">
+<a class="md-nav__link" href="../3/Jottings/2001-2002.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/0.md">
+<a class="md-nav__link" href="../3/Jottings/0.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/1906-1912.md">
+<a class="md-nav__link" href="../3/Jottings/1906-1912.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/1807-1812.md">
+<a class="md-nav__link" href="../3/Jottings/1807-1812.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/1801-1806.md">
+<a class="md-nav__link" href="../3/Jottings/1801-1806.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/17.md">
+<a class="md-nav__link" href="../3/Jottings/17.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Jottings/16.md">
+<a class="md-nav__link" href="../3/Jottings/16.md">
         None
       </a>
 </li>
@@ -1936,237 +1938,237 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/221227-expressvpn-refund.md">
+<a class="md-nav__link" href="../3/Articles/221227-expressvpn-refund.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220921-upgrade-introduction.md">
+<a class="md-nav__link" href="../3/Articles/220921-upgrade-introduction.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220715-macbook-story.md">
+<a class="md-nav__link" href="../3/Articles/220715-macbook-story.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220624-gratitude.md">
+<a class="md-nav__link" href="../3/Articles/220624-gratitude.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220621-bytedance-interview.md">
+<a class="md-nav__link" href="../3/Articles/220621-bytedance-interview.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220612-reply.md">
+<a class="md-nav__link" href="../3/Articles/220612-reply.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/2205-good-games.md">
+<a class="md-nav__link" href="../3/Articles/2205-good-games.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220506-stop-jianshu.md">
+<a class="md-nav__link" href="../3/Articles/220506-stop-jianshu.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220505-library-thu.md">
+<a class="md-nav__link" href="../3/Articles/220505-library-thu.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220415-interestx2.md">
+<a class="md-nav__link" href="../3/Articles/220415-interestx2.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220410-job-discussion.md">
+<a class="md-nav__link" href="../3/Articles/220410-job-discussion.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220410-independence.md">
+<a class="md-nav__link" href="../3/Articles/220410-independence.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220408-appreciating-girl.md">
+<a class="md-nav__link" href="../3/Articles/220408-appreciating-girl.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220402-languages-comparision.md">
+<a class="md-nav__link" href="../3/Articles/220402-languages-comparision.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220324-thoughts-996.md">
+<a class="md-nav__link" href="../3/Articles/220324-thoughts-996.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/220107-want-to-be.md">
+<a class="md-nav__link" href="../3/Articles/220107-want-to-be.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/211104-emotion-bad.md">
+<a class="md-nav__link" href="../3/Articles/211104-emotion-bad.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/210928-apple-recruitment-share.md">
+<a class="md-nav__link" href="../3/Articles/210928-apple-recruitment-share.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/2109-covid-influence.md">
+<a class="md-nav__link" href="../3/Articles/2109-covid-influence.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/2109-group-clear.md">
+<a class="md-nav__link" href="../3/Articles/2109-group-clear.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/210820-cccc-event.md">
+<a class="md-nav__link" href="../3/Articles/210820-cccc-event.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/210801-affection-3.md">
+<a class="md-nav__link" href="../3/Articles/210801-affection-3.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/210519-app-dev-experience.md">
+<a class="md-nav__link" href="../3/Articles/210519-app-dev-experience.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/210516-apple-education-address.md">
+<a class="md-nav__link" href="../3/Articles/210516-apple-education-address.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/210502-extend-your-way.md">
+<a class="md-nav__link" href="../3/Articles/210502-extend-your-way.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/201119-a-new-review.md">
+<a class="md-nav__link" href="../3/Articles/201119-a-new-review.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200916-my-pursue.md">
+<a class="md-nav__link" href="../3/Articles/200916-my-pursue.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200713-sutuo-and-me.md">
+<a class="md-nav__link" href="../3/Articles/200713-sutuo-and-me.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200703-talk-with-junior.md">
+<a class="md-nav__link" href="../3/Articles/200703-talk-with-junior.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200607-gaokao-memory.md">
+<a class="md-nav__link" href="../3/Articles/200607-gaokao-memory.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200604-small-goal.md">
+<a class="md-nav__link" href="../3/Articles/200604-small-goal.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200602-tennkinoko.md">
+<a class="md-nav__link" href="../3/Articles/200602-tennkinoko.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/200506-why.md">
+<a class="md-nav__link" href="../3/Articles/200506-why.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/2005-travel.md">
+<a class="md-nav__link" href="../3/Articles/2005-travel.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/190730-tangyan-rd-23.md">
+<a class="md-nav__link" href="../3/Articles/190730-tangyan-rd-23.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/190723-feelings-in-6-days.md">
+<a class="md-nav__link" href="../3/Articles/190723-feelings-in-6-days.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/190707-address-to-nonlocal-students.md">
+<a class="md-nav__link" href="../3/Articles/190707-address-to-nonlocal-students.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/190629-affection-2.md">
+<a class="md-nav__link" href="../3/Articles/190629-affection-2.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/1905-non-intelligent.md">
+<a class="md-nav__link" href="../3/Articles/1905-non-intelligent.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/1901-go-to-thu.md">
+<a class="md-nav__link" href="../3/Articles/1901-go-to-thu.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/1811-do-it.md">
+<a class="md-nav__link" href="../3/Articles/1811-do-it.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/1808-ideality-and-reality.md">
+<a class="md-nav__link" href="../3/Articles/1808-ideality-and-reality.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/1806-apply-thu.md">
+<a class="md-nav__link" href="../3/Articles/1806-apply-thu.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/18-tree.md">
+<a class="md-nav__link" href="../3/Articles/18-tree.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/18-what-i-love.md">
+<a class="md-nav__link" href="../3/Articles/18-what-i-love.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/17-dream-2017.md">
+<a class="md-nav__link" href="../3/Articles/17-dream-2017.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Articles/14-affection-1.md">
+<a class="md-nav__link" href="../3/Articles/14-affection-1.md">
         None
       </a>
 </li>
@@ -2186,12 +2188,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Literature/proses.md">
+<a class="md-nav__link" href="../3/Literature/proses.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Literature/poems.md">
+<a class="md-nav__link" href="../3/Literature/poems.md">
         None
       </a>
 </li>
@@ -2211,7 +2213,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../3/Info/accounts.md">
+<a class="md-nav__link" href="../3/Info/accounts.md">
         None
       </a>
 </li>
@@ -2234,22 +2236,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../REPRODUCE/index.md">
+<a class="md-nav__link" href="../REPRODUCE/index.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../REPRODUCE/how-to-ask-questions-the-smart-way.md">
+<a class="md-nav__link" href="../REPRODUCE/how-to-ask-questions-the-smart-way.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../REPRODUCE/tim-cook-at-duke.md">
+<a class="md-nav__link" href="../REPRODUCE/tim-cook-at-duke.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../REPRODUCE/my-best-teacher.md">
+<a class="md-nav__link" href="../REPRODUCE/my-best-teacher.md">
         None
       </a>
 </li>
@@ -2259,7 +2261,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../../%E5%85%B3%E4%BA%8E/">关于</a>
+<a href="../%E5%85%B3%E4%BA%8E/">关于</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2271,27 +2273,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ABOUT/cv-full.md">
+<a class="md-nav__link" href="../ABOUT/cv-full.md">
         �?人履�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ABOUT/support.md">
+<a class="md-nav__link" href="../ABOUT/support.md">
         �?持作�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ABOUT/help.md">
+<a class="md-nav__link" href="../ABOUT/help.md">
         文章编写�?�?
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ABOUT/build.md">
+<a class="md-nav__link" href="../ABOUT/build.md">
         网站构建
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../ABOUT/test.md">
+<a class="md-nav__link" href="../ABOUT/test.md">
         测试文档
       </a>
 </li>
@@ -2313,15 +2315,16 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
+<h1 id="computer-science">Computer Science<a class="headerlink" href="#computer-science" title="Permanent link">¶</a></h1>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2023</span>
 <br/>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 4, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2023</span>
 </small>
 </div>
 </article>
@@ -2369,12 +2372,12 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.a6761dc7.min.js"></script>
-<script src="../../../mkdocs/javascripts/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.annotate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../assets/javascripts/bundle.a6761dc7.min.js"></script>
+<script src="../mkdocs/javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="../../../javascripts/mathjax.js"></script>
+<script src="../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
